@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night Street Game - الصفحة الرئيسية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/games.css">
+</head>
+<body>  
+    <nav>
+        <ul>
+        <li><a href="../Games/games.html">Home</a></li>
+        <li><a href="../Login/login.html">Login</a></li>
+        <li><a href="../Register/register.html">Register</a></li>
+        <li><a href="../Contact/contact.html">Contact</a></li>
+        <li><a href="../Card/cart.html">Cart</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Welcome to Night Street Game</h1>
+        <p>Enjoy the best games in a luxurious and thrilling world! You must log in first to access the full games and instant purchase.</p>
+        
+        
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="
+Search for a luxurious game...
+">
+            <button onclick="searchGames()">Search</button>
+        </div>
+        
+        
+        <h2 style="font-family: 'Cinzel', serif; color: #FFD700; text-align: center; margin-top: 20px;">Preview of Luxurious Games (9 Games)</h2>
+        <div class="games-preview" id="games-container">
+            <div class="game-item" data-name="2 Red Dead Redemption ">
+                <img src="game1.jpg" alt="صورة لعبة 1 - لعبة ممتعة للجميع" onerror="this.src='../arthur.jpg.jpg'">
+                <h3> Red Dead Redemption 2</h3>
+               
+                <div class="price">Price: $80</div>
+                <button class="buy-btn" onclick="window.location.href='../details/1.html'">View Details</button>
+            </div>
+            <div class="game-item" data-name="Stray">
+                <img src="game2.jpg" alt="صورة لعبة 2 - مغامرات لا تنتهي" onerror="this.src='../Stray_cover_art.jpg'">
+                <h3>Stray</h3>
+                
+                <div class="price">Price: $30</div>
+                <button class="buy-btn" onclick="window.location.href='../details/2.html'">View Details</button>
+            </div>
+            <div class="game-item" data-name="Cyberpunk 2077">
+                <img src="game3.jpg" alt="صورة لعبة 3 - استراتيجية متقدمة" onerror="this.src='../images.jpeg'">
+                <h3>Cyberpunk 2077</h3>
+                
+                <div class="price">Price: $30</div>
+                <button class="buy-btn" onclick="window.location.href='../details/3.html'">View Details</button>
+            </div>
+            <div class="game-item" data-name="Marvel's Spider-Man Remastered">
+                <img src="game4.jpg" alt="صورة لعبة 4 - سباقات سريعة" onerror="this.src='../capsule_616x353.jpg'">
+                <h3> Marvel's Spider-Man Remastered</h3>
+                
+                <div class="price">Price: $60</div>
+                <button class="buy-btn" onclick="window.location.href='../details/4.html'">View Details</button>
+            </div>
+            <div class="game-item" data-name="Resident Evil 7: Biohazard">
+                <img src="game5.jpg" alt="صورة لعبة 5 - لعبة رعب نفسية" onerror="this.src='../cxd9vkFOAHVwwYG7lQKENGkrfyoAChNh.jpeg'">
+                <h3> Resident Evil 7: Biohazard</h3>
+               
+                <div class="price">Price: $40</div>
+                <button class="buy-btn" onclick="window.location.href='../details/5.html'">View Details</button>
+            </div>
+            <div class="game-item" data-name="Days Gone">
+                <img src="game6.jpg" alt="صورة لعبة 6 - لعبة تعاونية" onerror="this.src='../Days_Gone_cover_art.jpg'">
+                <h3>Days Gone</h3>
+                
+                <div class="price">Price: $40</div>
+                <button class="buy-btn" onclick="window.location.href='../details/6.html'">View Details</button>
+            </div>
+            <div class="game-item" data-name="Ghost of Tsushima">
+                <img src="game7.jpg" alt="صورة لعبة 7 - لعبة ألغاز ذكية" onerror="this.src='../b3iB2zf2xHj9shC0XDTULxND.avif'">
+                <h3> Ghost of Tsushima</h3>
+               
+                <div class="price">Price: $60</div>
+                <button class="buy-btn" onclick="window.location.href='../details/7.html'">View Details</button>
+            </div>
+            <div class="game-item" data-name="WWE2K25">
+                <img src="game8.jpg" alt="صورة لعبة 8 - لعبة بقاء" onerror="this.src='../images (1).jpeg'">
+                <h3> WWE2K25</h3>
+               
+                <div class="price">Price: $60</div>
+                <button class="buy-btn" onclick="window.location.href='../details/8.html'">View Details</button>
+            </div>
+            <div class="game-item" data-name="Call of Duty Modern Warfare III">
+                <img src="game9.jpg" alt="صورة لعبة 9 - لعبة ألغاز ذكية" onerror="this.src='../Store_GamesPDP_Hero01.PNG'">
+                <h3>Call of Duty Modern Warfare III </h3>
+               
+                <div class="price">Price: $70</div>
+                <button class="buy-btn" onclick="window.location.href='../details/9.html'">View Details</button>
+            </div>
+        </div>
+        
+  
+        
+        <p style="text-align: center; margin-top: 40px; font-style: italic; color: #FFD700;">
+            Join us in the luxurious games journey at Night Street Game – choose your favorite game now!
+        </p>
+    </div>
+     <footer>
+           <ul>
+              <li><a href="../about us/about.html">About US </a></li>
+           <li><a href="../Faq/faq.html">FAQ </a></li>
+           <li><a href="../Privacy/privacy.html">Privacy Policy </a></li>
+            <li><a href="../Term/terms.html">Terms of Service </a></li>
+        </ul>
+        <h3>Follow Night Street Game on Social Media</h3>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61580499302177&rdid=ava4clF8qampXxCf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17ngz4DkrS%2F#" target="_blank">
+                <img src="../image\icon-facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/zengawygaming/" target="_blank">
+                <img src="../image\icon-instagram.png" alt="Instagram">
+            </a>
+            <a href="https://youtube.com/@zengawygaming?si=zAup-W0GnBE5AV3i" target="_blank" aria-label="YouTube">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.498 6.186a2.993 2.993 0 0 0-2.107-2.12C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.391.566a2.993 2.993 0 0 0-2.107 2.12A31.348 31.348 0 0 0 .5 12a31.348 31.348 0 0 0 .002 5.814 2.993 2.993 0 0 0 2.107 2.12C4.495 20.5 12 20.5 12 20.5s7.505 0 9.391-.566a2.993 2.993 0 0 0 2.107-2.12A31.348 31.348 0 0 0 23.5 12a31.348 31.348 0 0 0-.002-5.814zM9.75 15.568V8.432L15.818 12 9.75 15.568z" />
+                </svg>
+            </a>
+        </div>
+    </footer>
+    <script src="js/games.js"></script>
+</body>
+</html>
