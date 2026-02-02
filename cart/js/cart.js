@@ -24,7 +24,7 @@ function processPayment() {
   }
 
   alert("Payment successful! Thank you for your purchase.");
-  window.location.href = "index.html";
+  window.location.href = "../../index.html";
 }
 
 function showError(message) {

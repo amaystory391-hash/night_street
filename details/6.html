@@ -10,7 +10,7 @@
 <body>
     <nav>
         <ul>
-        <li><a href="../Games/games.html">Home</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li><a href="../Login/login.html">Login</a></li>
         <li><a href="../Register/register.html">Register</a></li>
         <li><a href="../Contact/contact.html">Contact</a></li>
@@ -73,7 +73,7 @@ Platforms: PC, PlayStation
         </div>
 
         <div class="link">
-            <a href="../Games/games.html">Back to Games</a>
+            <a href="../index.html">Back to Games</a>
         </div>
     </div>
 
@@ -92,37 +92,37 @@ Platforms: PC, PlayStation
             window.location.href = '../Card/cart.html';
         }
 
-        // Stars Rating
-        const stars = document.querySelectorAll('#stars span');
-        const ratingText = document.getElementById('ratingText');
-        let selectedRating = 0;
+       // Stars Rating
+const stars = document.querySelectorAll('#stars span'); // تم التعديل هنا ✔
+const ratingText = document.getElementById('ratingText');
+let selectedRating = 0;
 
-        stars.forEach(star => {
-            star.addEventListener('mouseover', () => {
-                const value = star.getAttribute('data-value');
-                highlightStars(value);
-            });
+stars.forEach(star => {
+    star.addEventListener('mouseover', () => {
+        const value = star.getAttribute('data-value');
+        highlightStars(value);
+    });
 
-            star.addEventListener('mouseout', () => {
-                highlightStars(selectedRating);
-            });
+    star.addEventListener('mouseout', () => {
+        highlightStars(selectedRating);
+    });
 
-            star.addEventListener('click', () => {
-                selectedRating = star.getAttribute('data-value');
-                ratingText.textContent = `You rated this game ${selectedRating} star${selectedRating > 1 ? 's' : ''}`;
-                highlightStars(selectedRating);
-            });
-        });
+    star.addEventListener('click', () => {
+        selectedRating = star.getAttribute('data-value');
+        ratingText.textContent = `You rated this game ${selectedRating} star${selectedRating > 1 ? 's' : ''}`;
+        highlightStars(selectedRating);
+    });
+});
 
-        function highlightStars(rating) {
-            stars.forEach(star => {
-                if(star.getAttribute('data-value') <= rating) {
-                    star.classList.add('selected');
-                } else {
-                    star.classList.remove('selected');
-                }
-            });
+function highlightStars(rating) {
+    stars.forEach(star => {
+        if (star.getAttribute('data-value') <= rating) {
+            star.classList.add('selected');
+        } else {
+            star.classList.remove('selected');
         }
+    });
+}
     </script>
 <footer>
            <ul>
@@ -134,10 +134,10 @@ Platforms: PC, PlayStation
         <h3>Follow Night Street Game on Social Media</h3>
         <div class="social-links">
             <a href="https://www.facebook.com/profile.php?id=61580499302177&rdid=ava4clF8qampXxCf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17ngz4DkrS%2F#" target="_blank">
-                <img src="../image\icon-facebook.png" alt="Facebook">
+                <img src="../image/icon-facebook.png" alt="Facebook">
             </a>
             <a href="https://www.instagram.com/zengawygaming/" target="_blank">
-                <img src="../image\icon-instagram.png" alt="Instagram">
+                <img src="../image/icon-instagram.png" alt="Instagram">
             </a>
             <a href="https://youtube.com/@zengawygaming?si=zAup-W0GnBE5AV3i" target="_blank" aria-label="YouTube">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">

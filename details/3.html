@@ -1,128 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Night Street Game - Cyberpunk 2077</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/detalis.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night Street Game - Cyberpunk 2077</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/detalis.css">
 </head>
+
 <body>
     <nav>
         <ul>
-        <li><a href="../Games/games.html">Home</a></li>
-        <li><a href="../Login/login.html">Login</a></li>
-        <li><a href="../Register/register.html">Register</a></li>
-        <li><a href="../Contact/contact.html">Contact</a></li>
-        <li><a href="../Card/cart.html">Cart</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../Login/login.html">Login</a></li>
+            <li><a href="../Register/register.html">Register</a></li>
+            <li><a href="../Contact/contact.html">Contact</a></li>
+            <li><a href="../Card/cart.html">Cart</a></li>
         </ul>
     </nav>
 
-<div class="container">
-<h1>Cyberpunk 2077 Details - Night Street Game</h1>
+    <div class="container">
+        <h1>Cyberpunk 2077 Details - Night Street Game</h1>
 
-<div class="left-side">
-    <img src="game1.jpg" alt="Game Image" class="game-image" onerror="this.src='../images.jpeg'">
-    <div class="description">
-        Cyberpunk 2077<br><br>
-        Overview: Cyberpunk 2077 is an open-world RPG set in the dark, futuristic Night City. Players control “V,” a mercenary trying to survive while searching for immortality via cybernetic enhancements.<br><br>
-        Gameplay:<br>
-        - Explore a vast city with main missions and side quests.<br>
-        - Customize combat, tech, and social skills.<br>
-        - Combat options include firearms, melee, stealth, hacking.<br>
-        - Dialogue choices shape multiple story endings.<br><br>
-        Platforms: PC, PS4, PS5, Xbox One, Xbox Series X/S
+        <div class="left-side">
+            <img src="game1.jpg" alt="Game Image" class="game-image" onerror="this.src='../images.jpeg'">
+            <div class="description">
+                Cyberpunk 2077<br><br>
+                Overview: Cyberpunk 2077 is an open-world RPG set in the dark, futuristic Night City. Players control
+                “V,” a mercenary trying to survive while searching for immortality via cybernetic enhancements.<br><br>
+                Gameplay:<br>
+                - Explore a vast city with main missions and side quests.<br>
+                - Customize combat, tech, and social skills.<br>
+                - Combat options include firearms, melee, stealth, hacking.<br>
+                - Dialogue choices shape multiple story endings.<br><br>
+                Platforms: PC, PS4, PS5, Xbox One, Xbox Series X/S
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="stars" id="stars">
+                <span data-value="1">&#9733;</span>
+                <span data-value="2">&#9733;</span>
+                <span data-value="3">&#9733;</span>
+                <span data-value="4">&#9733;</span>
+                <span data-value="5">&#9733;</span>
+            </div>
+
+            <!-- مكان ظهور التقييم -->
+            <div id="ratingText" style="margin:10px; color:#FFD700; font-size:20px;"></div>
+
+            <div class="average-rating">Average Rating: 4.2</div>
+            <div class="game-size">Game Size: 56 GB</div>
+            <div class="price">$30</div>
+            <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="link">
+            <a href="../index.html">Back to Games</a>
+        </div>
     </div>
-</div>
 
-<div class="right-side">
-    <div class="star-rating">
-        <span data-value="1">&#9733;</span>
-        <span data-value="2">&#9733;</span>
-        <span data-value="3">&#9733;</span>
-        <span data-value="4">&#9733;</span>
-        <span data-value="5">&#9733;</span>
-    </div>
-    <div class="average-rating">Average Rating: 4.2</div>
-    <div class="game-size">Game Size: 56 GB</div>
-    <div class="price">$30</div>
-    <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-</div>
+    <script>
+        // Stars Rating
+        const stars = document.querySelectorAll('#stars span'); // تم التعديل هنا ✔
+        const ratingText = document.getElementById('ratingText');
+        let selectedRating = 0;
 
-<div class="link">
-    <a href="../Games/games.html">Back to Games</a>
-</div>
-</div>
-
-<script>
-// Stars Rating
-    const stars = document.querySelectorAll('#stars span');
-    const ratingText = document.getElementById('ratingText');
-    let selectedRating = 0;
-
-    stars.forEach(star => {
-        star.addEventListener('mouseover', () => {
-            const value = star.getAttribute('data-value');
-            highlightStars(value);
-        });
-
-        star.addEventListener('mouseout', () => {
-            highlightStars(selectedRating);
-        });
-
-        star.addEventListener('click', () => {
-            selectedRating = star.getAttribute('data-value');
-            ratingText.textContent = `You rated this game ${selectedRating} star${selectedRating > 1 ? 's' : ''}`;
-            highlightStars(selectedRating);
-        });
-    });
-
-    function highlightStars(rating) {
         stars.forEach(star => {
-            if(star.getAttribute('data-value') <= rating) {
-                star.classList.add('selected');
-            } else {
-                star.classList.remove('selected');
-            }
+            star.addEventListener('mouseover', () => {
+                const value = star.getAttribute('data-value');
+                highlightStars(value);
+            });
+
+            star.addEventListener('mouseout', () => {
+                highlightStars(selectedRating);
+            });
+
+            star.addEventListener('click', () => {
+                selectedRating = star.getAttribute('data-value');
+                ratingText.textContent = `You rated this game ${selectedRating} star${selectedRating > 1 ? 's' : ''}`;
+                highlightStars(selectedRating);
+            });
         });
-    }
 
-function addToCart() {
-    const game = {
-        name: "Cyberpunk 2077",
-        price: 30,
-        size: "56 GB",
-        image: "../images.jpeg",
-        detailsPage: "../details/3.html"
-    };
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.push(game);
-    localStorage.setItem('cart', JSON.stringify(cart));
-    window.location.href = '../Card/cart.html';
-}
+        function highlightStars(rating) {
+            stars.forEach(star => {
+                if (star.getAttribute('data-value') <= rating) {
+                    star.classList.add('selected');
+                } else {
+                    star.classList.remove('selected');
+                }
+            });
+        }
 
-</script>
- <footer>
-           <ul>
-              <li><a href="../about us/about.html">About US </a></li>
-           <li><a href="../Faq/faq.html">FAQ </a></li>
-           <li><a href="../Privacy/privacy.html">Privacy Policy </a></li>
+
+        // Add to Cart
+        function addToCart() {
+            const game = {
+                name: "Cyberpunk 2077",
+                price: 30,
+                size: "56 GB",
+                image: "../images.jpeg",
+                detailsPage: "../details/3.html"
+            };
+
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(game);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            window.location.href = '../Card/cart.html';
+        }
+    </script>
+
+    <footer>
+        <ul>
+            <li><a href="../about us/about.html">About US </a></li>
+            <li><a href="../Faq/faq.html">FAQ </a></li>
+            <li><a href="../Privacy/privacy.html">Privacy Policy </a></li>
             <li><a href="../Term/terms.html">Terms of Service </a></li>
         </ul>
         <h3>Follow Night Street Game on Social Media</h3>
         <div class="social-links">
-            <a href="https://www.facebook.com/profile.php?id=61580499302177&rdid=ava4clF8qampXxCf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17ngz4DkrS%2F#" target="_blank">
-                <img src="../image\icon-facebook.png" alt="Facebook">
+            <a href="https://www.facebook.com/profile.php?id=61580499302177" target="_blank">
+                <img src="../image/icon-facebook.png" alt="Facebook">
             </a>
             <a href="https://www.instagram.com/zengawygaming/" target="_blank">
-                <img src="../image\icon-instagram.png" alt="Instagram">
+                <img src="../image/icon-instagram.png" alt="Instagram">
             </a>
-            <a href="https://youtube.com/@zengawygaming?si=zAup-W0GnBE5AV3i" target="_blank" aria-label="YouTube">
+            <a href="https://youtube.com/@zengawygaming" target="_blank" aria-label="YouTube">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M23.498 6.186a2.993 2.993 0 0 0-2.107-2.12C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.391.566a2.993 2.993 0 0 0-2.107 2.12A31.348 31.348 0 0 0 .5 12a31.348 31.348 0 0 0 .002 5.814 2.993 2.993 0 0 0 2.107 2.12C4.495 20.5 12 20.5 12 20.5s7.505 0 9.391-.566a2.993 2.993 0 0 0 2.107-2.12A31.348 31.348 0 0 0 23.5 12a31.348 31.348 0 0 0-.002-5.814zM9.75 15.568V8.432L15.818 12 9.75 15.568z" />
+                    <path
+                        d="M23.498 6.186a2.993 2.993 0 0 0-2.107-2.12C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.391.566a2.993 2.993 0 0 0-2.107 2.12A31.348 31.348 0 0 0 .5 12a31.348 31.348 0 0 0 .002 5.814 2.993 2.993 0 0 0 2.107 2.12C4.495 20.5 12 20.5 12 20.5s7.505 0 9.391-.566a2.993 2.993 0 0 0 2.107-2.12A31.348 31.348 0 0 0 23.5 12a31.348 31.348 0 0 0-.002-5.814zM9.75 15.568V8.432L15.818 12 9.75 15.568z" />
                 </svg>
             </a>
         </div>
     </footer>
+
 </body>
+
 </html>

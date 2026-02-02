@@ -1,229 +1,229 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #000000 0%, #001122 50%, #000000 100%);
-    background-attachment: fixed;
-    color: #E0E0E0;
-    margin: 0;
-    padding: 0;
-    animation: fadeIn 1s ease-in;
-    font-size: 20px;
+font-family: 'Roboto', sans-serif;
+background: linear-gradient(135deg, #000000 0%, #001122 50%, #000000 100%);
+background-attachment: fixed;
+color: #E0E0E0;
+margin: 0;
+padding: 0;
+animation: fadeIn 1s ease-in;
+font-size: 20px;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-nav {
-    background: linear-gradient(145deg, #111111, #222222);
-    padding: 25px 35px;
-    border-bottom: 3px solid #FFD700;
-    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 35px;
-}
-
-nav a {
-    color: #007BFF;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-nav a:hover {
-    color: #FFD700;
-    text-shadow: 0 0 10px #FFD700;
-}
-
-.container {
-    max-width: 1300px;
-    margin: 70px auto;
-    background: linear-gradient(145deg, #111111, #222222);
-    padding: 60px;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0, 123, 255, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    border: 3px solid #FFD700;
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-}
-
-.container::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    background: linear-gradient(45deg, #FFD700, #007BFF, #FFD700);
-    border-radius: 25px;
-    z-index: -1;
-    opacity: 0.6;
-    filter: blur(5px);
-}
-
-h1 {
-    font-family: 'Cinzel', serif;
-    text-align: center;
-    color: #FFD700;
-    font-size: 4em;
-    text-shadow: 0 0 25px #007BFF, 0 0 50px #FFD700;
-    margin-bottom: 50px;
-    grid-column: 1 / -1;
-}
-
-.left-side {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.game-image {
-    width: 100%;
-    max-width: 450px;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 40px;
-    transition: transform 0.3s ease;
-}
-
-.game-image:hover {
-    transform: scale(1.05);
-}
-
-.description {
-    font-size: 22px;
-    color: #CCCCCC;
-    line-height: 1.9;
-    text-align: center;
-    max-width: 100%;
-}
-
-.right-side {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.star-rating {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.star-rating span {
-    font-size: 28px;
-    color: #444;
-    margin: 0 5px;
+#stars span {
+    font-size: 35px;
+    color: #555;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    margin: 0 6px;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.star-rating span.hovered,
-.star-rating span.selected {
+#stars span:hover {
     color: #FFD700;
     transform: scale(1.2);
 }
 
+#stars span.selected {
+    color: #FFD700;
+    transform: scale(1.25);
+}
+
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navbar */
+nav {
+background: linear-gradient(145deg, #111111, #222222);
+padding: 25px 35px;
+border-bottom: 3px solid #FFD700;
+box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+nav ul {
+list-style: none;
+margin: 0;
+padding: 0;
+text-align: center;
+}
+
+nav ul li {
+display: inline-block;
+margin: 0 35px;
+}
+
+nav a {
+color: #007BFF;
+text-decoration: none;
+font-size: 24px;
+font-weight: bold;
+transition: all 0.3s ease;
+}
+
+nav a:hover {
+color: #FFD700;
+text-shadow: 0 0 10px #FFD700;
+}
+
+.container {
+max-width: 1300px;
+margin: 70px auto;
+background: linear-gradient(145deg, #111111, #222222);
+padding: 60px;
+border-radius: 20px;
+box-shadow: 0 15px 40px rgba(0, 123, 255, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+border: 3px solid #FFD700;
+position: relative;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 60px;
+}
+
+.container::before {
+content: '';
+position: absolute;
+top: -5px; left: -5px; right: -5px; bottom: -5px;
+background: linear-gradient(45deg, #FFD700, #007BFF, #FFD700);
+border-radius: 25px;
+z-index: -1;
+opacity: 0.6;
+filter: blur(5px);
+}
+
+h1 {
+font-family: 'Cinzel', serif;
+text-align: center;
+color: #FFD700;
+font-size: 4em;
+text-shadow: 0 0 25px #007BFF, 0 0 50px #FFD700;
+margin-bottom: 50px;
+grid-column: 1 / -1;
+}
+
+.left-side {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.game-image {
+width: 100%;
+max-width: 450px;
+height: 280px;
+object-fit: cover;
+border-radius: 10px;
+margin-bottom: 40px;
+transition: transform 0.3s ease;
+}
+
+.game-image:hover {
+transform: scale(1.05);
+}
+
+.description {
+font-size: 22px;
+color: #CCCCCC;
+line-height: 1.9;
+text-align: center;
+max-width: 100%;
+}
+
+.right-side {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.star-rating {
+display: flex;
+justify-content: center;
+margin-bottom: 20px;
+}
+
+.star-rating span {
+font-size: 28px;
+color: #444;
+margin: 0 5px;
+cursor: pointer;
+transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.star-rating span.hovered,
+.star-rating span.selected {
+color: #FFD700;
+transform: scale(1.2);
+}
+
 .average-rating {
-    font-size: 18px;
-    color: #CCCCCC;
-    margin-bottom: 15px;
+font-size: 18px;
+color: #CCCCCC;
+margin-bottom: 15px;
 }
 
 .game-size {
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    color: #CCCCCC;
-    margin-bottom: 20px;
-    text-align: center;
+font-family: 'Roboto', sans-serif;
+font-size: 18px;
+color: #CCCCCC;
+margin-bottom: 20px;
+text-align: center;
 }
 
 .price {
-    font-family: 'Cinzel', serif;
-    font-size: 3em;
-    color: #FFD700;
-    margin-bottom: 40px;
+font-family: 'Cinzel', serif;
+font-size: 3em;
+color: #FFD700;
+margin-bottom: 40px;
 }
 
 .add-to-cart-btn {
-    background: linear-gradient(45deg, #FFD700, #FFA500);
-    color: #000;
-    padding: 25px 50px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+background: linear-gradient(45deg, #FFD700, #FFA500);
+color: #000;
+padding: 25px 50px;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+font-size: 24px;
+font-weight: bold;
+transition: all 0.3s ease;
+box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
 }
 
 .add-to-cart-btn:hover {
-    background: linear-gradient(45deg, #FFA500, #FFD700);
-    transform: scale(1.1);
+background: linear-gradient(45deg, #FFA500, #FFD700);
+transform: scale(1.1);
 }
 
 .link {
-    text-align: center;
-    margin-top: 40px;
-    grid-column: 1 / -1;
+text-align: center;
+margin-top: 40px;
+grid-column: 1 / -1;
 }
 
 .link a {
-    color: #007BFF;
-    text-decoration: none;
-    font-size: 22px;
+color: #007BFF;
+text-decoration: none;
+font-size: 22px;
 }
 
 .link a:hover {
-    color: #FFD700;
+color: #FFD700;
 }
 
 @media (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 40px;
-    }
-    
-    h1 {
-        font-size: 3.2em;
-    }
-    
-    .game-image {
-        max-width: 350px;
-        height: 220px;
-    }
-    
-    .description {
-        font-size: 20px;
-    }
-    
-    .game-size {
-        font-size: 16px;
-        margin-bottom: 15px;
-    }
-
-    .star-rating span {
-        font-size: 24px;
-    }
+.container {
+grid-template-columns: 1fr;
+gap: 40px;
+padding: 40px;
 }
-    footer {
+
+h1 { font-size: 3.2em; }
+.game-image { max-width: 350px; height: 220px; }
+.description { font-size: 20px; }
+.game-size { font-size: 16px; margin-bottom: 15px; }
+.star-rating span { font-size: 24px; }
+}
+footer {
     text-align: center;
     margin-top: 80px;
     padding: 40px;

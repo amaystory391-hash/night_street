@@ -18,7 +18,7 @@ function loginUser() {
   }
 
   alert("Login successful! Welcome to Night Street Game.");
-  window.location.href = "../Games/games.html";
+  window.location.href = "../index.html";
 }
 
 function showError(message) {
